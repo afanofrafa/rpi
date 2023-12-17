@@ -1,4 +1,4 @@
-import { createBrowserRouter, Navigate, redirect, RouterProvider } from 'react-router-dom';
+import { createHashRouter, RouterProvider } from 'react-router-dom';
 import HeroDetails from './components/herodetails/HeroDetails';
 import suicideSquadCharacters from './components/struct/Struct';
 import HeroSearch from './components/hero_list/hero_search';
@@ -6,7 +6,7 @@ import Home from './components/home/Home';
 import ErrorPage from './components/errorpage/ErrorPage';
 import { I18nextProvider } from 'react-i18next';
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/", element: <Home heroData={suicideSquadCharacters} />,
     errorElement: <ErrorPage />,

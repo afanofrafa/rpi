@@ -1,49 +1,49 @@
 import { Avatar, Box, Button, Card, CardActions, CardContent, CardMedia, Container, Grid, Typography } from "@mui/material";
 import React from 'react';
 import Header from './../header/Header'
-import { useTranslation} from "react-i18next";
+import { useTranslation } from "react-i18next";
 
-const Home = (props)=> {
-    const {heroData} = props;   
-    const { t, i18n} = useTranslation();
+const Home = (props) => {
+    const { heroData } = props;
+    const { t, i18n } = useTranslation();
     const lang = i18n.language;
     const today = new Date();
     const pos = today.getDate() % heroData.length;
     const hero = heroData.at(pos);
     const createTypography = (text, variant) => (
         <Typography
-          component={variant}
-          variant={variant}
-          sx={{
-            pt:3
-          }}
-          textAlign="center" >
-          {t("home." + text)}
+            component={variant}
+            variant={variant}
+            sx={{
+                pt: 3
+            }}
+            textAlign="center" >
+            {t("home." + text)}
         </Typography>
-      );
+    );
     return (
         <main>
-            <Header/>
+            <Header />
             <Container
                 sx={{
-                    bgcolor:'#e3dfdf',
-                    p:5
+                    bgcolor: '#e3dfdf',
+                    p: 5
                 }}
             >
                 {createTypography("portalTitle", "h1")}
                 {createTypography("portalDesription", "h5")}
             </Container>
-            <Container maxWidth="lg"             
+            <Container maxWidth="lg"
                 sx={{
-                    bgcolor:'grey.300',
-                    p:5
+                    bgcolor: 'grey.300',
+                    p: 5
                 }}
             >
                 {createTypography("heroOfTheDay", "h3")}
                 <Card
-                    sx={{display: 'flex', flexDirection: 'row', mt:5}} >
+                    sx={{ display: 'flex', flexDirection: 'row', mt: 5 }} >
                     <Box sx={{ width: 500, padding: 3 }} alignSelf="center" >
-                    <CardMedia component="img" image={hero.photo.src} /> 
+                        <CardMedia component="img" image={hero.photo.src} />
                     </Box>
                     <Box>
                         <CardContent>
@@ -56,22 +56,22 @@ const Home = (props)=> {
                         </CardContent>
                         <CardActions>
                             <Button
-                            href={`/hero/${hero.id_Hero}`}
-                            size="large">
+                                href={`#/hero/${hero.id_Hero}`}
+                                size="large">
                                 {t("home.seeMoreButton")}
                             </Button>
                         </CardActions>
                     </Box>
-                </Card>   
+                </Card>
             </Container>
             <Container maxWidth="lg"
                 sx={{
-                    bgcolor:'grey.300',
-                    p:5
+                    bgcolor: 'grey.300',
+                    p: 5
                 }}
             >
                 {createTypography("devsTitle", "h3")}
-                <Grid container direction="row" justifyContent="space-around" spacing={4} sx={{pt:10}}>
+                <Grid container direction="row" justifyContent="space-around" spacing={4} sx={{ pt: 10 }}>
                     <DeveloperCard name="KirillStolbov" avatarSrc="icons/logo3.png" />
                     <DeveloperCard name="1Arsen1" avatarSrc="icons/logo2.png" />
                     <DeveloperCard name="KopVZakone" avatarSrc="icons/logo1.png" />
@@ -88,7 +88,7 @@ const DeveloperCard = ({ name, avatarSrc }) => {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        flexDirection:'column'
+        flexDirection: 'column'
     };
     const generateLinkProps = (url) => ({
         href: url,
@@ -96,27 +96,27 @@ const DeveloperCard = ({ name, avatarSrc }) => {
         rel: "noopener noreferrer"
     });
     return (
-    <Grid item sx={{ minWidth: '150px' }}>
-      <Card sm={6} md={4} square>
-        <CardMedia sx={centerStyles}>
-           <a {...generateLinkProps(githubLink)}>
-               <Avatar alt="logo" src={avatarSrc} sx={{ width: 100, height: 100 }} />
-           </a>
-        </CardMedia>
-        <CardContent sx={centerStyles}>
-           <Box>
-           <a {...generateLinkProps(githubLink)} style={{ textDecoration: 'none', color: 'black' }}>
-               <Typography>{name}</Typography>
-           </a>
-           </Box>
-           <Box>
-           <a {...generateLinkProps(githubLink)} style={{ textDecoration: 'none', color: 'black' }}>
-               <Typography>{githubLink}</Typography>
-           </a>
-           </Box>
-        </CardContent>
-      </Card>
-    </Grid>
+        <Grid item sx={{ minWidth: '150px' }}>
+            <Card sm={6} md={4} square>
+                <CardMedia sx={centerStyles}>
+                    <a {...generateLinkProps(githubLink)}>
+                        <Avatar alt="logo" src={avatarSrc} sx={{ width: 100, height: 100 }} />
+                    </a>
+                </CardMedia>
+                <CardContent sx={centerStyles}>
+                    <Box>
+                        <a {...generateLinkProps(githubLink)} style={{ textDecoration: 'none', color: 'black' }}>
+                            <Typography>{name}</Typography>
+                        </a>
+                    </Box>
+                    <Box>
+                        <a {...generateLinkProps(githubLink)} style={{ textDecoration: 'none', color: 'black' }}>
+                            <Typography>{githubLink}</Typography>
+                        </a>
+                    </Box>
+                </CardContent>
+            </Card>
+        </Grid>
     );
- };
+};
 export default Home;

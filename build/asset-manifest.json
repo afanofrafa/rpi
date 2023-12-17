@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/RPI2023-2/static/css/main.a60713a8.css",
-    "main.js": "/RPI2023-2/static/js/main.1461c8b8.js",
-    "static/js/787.d4aba7ab.chunk.js": "/RPI2023-2/static/js/787.d4aba7ab.chunk.js",
-    "static/media/fon1.png": "/RPI2023-2/static/media/fon1.09818d9774ba7c15f583.png",
-    "index.html": "/RPI2023-2/index.html",
-    "static/media/getFetch.cjs": "/RPI2023-2/static/media/getFetch.40f37ddea2378391108f.cjs",
-    "main.a60713a8.css.map": "/RPI2023-2/static/css/main.a60713a8.css.map",
-    "main.1461c8b8.js.map": "/RPI2023-2/static/js/main.1461c8b8.js.map",
-    "787.d4aba7ab.chunk.js.map": "/RPI2023-2/static/js/787.d4aba7ab.chunk.js.map"
+    "main.css": "/rpi/static/css/main.c3be844f.css",
+    "main.js": "/rpi/static/js/main.f7e0fe9f.js",
+    "static/js/787.d4aba7ab.chunk.js": "/rpi/static/js/787.d4aba7ab.chunk.js",
+    "static/media/fon1.png": "/rpi/static/media/fon1.09818d9774ba7c15f583.png",
+    "index.html": "/rpi/index.html",
+    "static/media/getFetch.cjs": "/rpi/static/media/getFetch.40f37ddea2378391108f.cjs",
+    "main.c3be844f.css.map": "/rpi/static/css/main.c3be844f.css.map",
+    "main.f7e0fe9f.js.map": "/rpi/static/js/main.f7e0fe9f.js.map",
+    "787.d4aba7ab.chunk.js.map": "/rpi/static/js/787.d4aba7ab.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a60713a8.css",
-    "static/js/main.1461c8b8.js"
+    "static/css/main.c3be844f.css",
+    "static/js/main.f7e0fe9f.js"
   ]
 }

@@ -29,10 +29,10 @@ const Header = () => {
                         </Button>
                     </Box> 
                     <Box> 
-                        <Button href={`/`} sx={{pr:6, color: 'common.black'}}>
+                        <Button href={`#/`} sx={{pr:6, color: 'common.black'}}>
                             {t("header.mainPage")}
                         </Button>   
-                        <Button href={`/search`} sx={{pr:6, color: 'common.black'}}>
+                        <Button href={`#/search`} sx={{pr:6, color: 'common.black'}}>
                             {t("header.search")}
                         </Button>                     
                     </Box> 

@@ -62,7 +62,7 @@ const HeroSearch = (props) => {
                                 </CardContent>
                                 <CardActions>
                                     <Button
-                                        href={`/hero/${hero.id_Hero}`}
+                                        href={`#/hero/${hero.id_Hero}`}
                                         size="small">{t("search.seeMoreButton")}</Button>
                                 </CardActions>
                             </Card>
