@@ -12,7 +12,7 @@ i18next
       escapeValue: false,
     },
     backend: {
-      loadPath: '/<your_repo_name>/locales/{{lng}}/{{ns}}.json'
+      loadPath: '/rpi/locales/{{lng}}/{{ns}}.json'
     }
   })
 export default i18next;
