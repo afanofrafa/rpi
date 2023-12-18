@@ -73,7 +73,7 @@ const Home = (props) => {
                 {createTypography("devsTitle", "h3")}
                 <Grid container direction="row" justifyContent="space-around" spacing={4} sx={{ pt: 10 }}>
                     <DeveloperCard name="KirillStolbov" avatarSrc="116667638?v=4" />
-                    <DeveloperCard name="1Arsen1" avatarSrc="146372888?s=400&v=4" />
+                    <DeveloperCard name="afanofrafa" avatarSrc="146372888?s=400&v=4" />
                     <DeveloperCard name="KopVZakone" avatarSrc="109739214?v=4" />
                 </Grid>
             </Container>
